@@ -42,7 +42,7 @@ const QuoteResp  = () => {
 
     return (
         <div className="menu-content">
-            <button className="add-btn" onClick={() => navigate("/admin/quote/add-quote")}>Add Quote</button>
+            <button className="add-btn" onClick={() => navigate("/old/admin/quote/add-quote")}>Add Quote</button>
             {loading ? (
                 <p>Loading...</p> // Show loading message while fetching data
             ) : (

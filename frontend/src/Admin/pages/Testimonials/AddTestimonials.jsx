@@ -31,7 +31,7 @@ const AddTestimonial = () => {
 
             await postTestimonial(data);
             alert("Testimonial added successfully");
-            navigate("/admin/testimonial");
+            navigate("/old/admin/testimonial");
         } catch (error) {
             console.error("Error while saving testimonial:", error);
             const errorMessage =
@@ -78,7 +78,7 @@ const AddTestimonial = () => {
             <button type="button" onClick={handleSave}>
                 Save
             </button>
-            <button type="button" onClick={() => navigate("/admin/testimonial")}>
+            <button type="button" onClick={() => navigate("/old/admin/testimonial")}>
                 Cancel
             </button>
         </div>

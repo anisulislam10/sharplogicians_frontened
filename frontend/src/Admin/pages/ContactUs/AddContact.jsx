@@ -35,7 +35,7 @@ const AddContact = () => {
       // Send the form data to the backend
       await postContact(data); // Pass the FormData to the API postportfolio function
       // console.log("Portfolio saved successfully:", formData);
-      navigate("/admin/contact"); // Navigate to portfolio page after success
+      navigate("/old/admin/contact"); // Navigate to portfolio page after success
     } catch (error) {
       // Show the error message in an alert
       const errorMessage = error.response?.data?.message || "An error occurred while saving the Client.";
@@ -98,7 +98,7 @@ const AddContact = () => {
       
       
       <button type="button" onClick={handleSave}>Save</button>
-      <button type="button" onClick={() => navigate("/admin/contact")}>Cancel</button>
+      <button type="button" onClick={() => navigate("/old/admin/contact")}>Cancel</button>
     </div>
   );
 };

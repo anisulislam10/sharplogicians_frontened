@@ -69,7 +69,7 @@ const EditTeam = () => {
         try {
             await updateTeam(id, formData); // Call API to update Team
             alert("Team updated successfully");
-            navigate("/admin/team"); // Redirect to Team list
+            navigate("/old/admin/team"); // Redirect to Team list
         } catch (error) {
             console.error("Error updating Team:", error);
             alert("Failed to update Team");

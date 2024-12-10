@@ -38,7 +38,7 @@ const Testimonial = () => {
 
     return (
         <div className="menu-content">
-<button className="add-btn" onClick={() => navigate("/admin/testimonial/add-testimonial")}>
+<button className="add-btn" onClick={() => navigate("/old/admin/testimonial/add-testimonial")}>
     Add Testimonial
 </button>
             {loading ? <p>Loading...</p> : <Table data={about} setData={setAbout} type="testimonial" />}

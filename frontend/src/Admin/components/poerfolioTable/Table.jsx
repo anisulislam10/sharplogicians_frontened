@@ -12,7 +12,7 @@ const Table = ({ data = [], type, setData }) => {
     };
     const handleEdit = (id) => {
         // Navigate to edit page
-        navigate(`/admin/portfolio/edit-portfolio/${id}`);
+        navigate(`/old/admin/portfolio/edit-portfolio/${id}`);
     };
 
     const handleDelete = async (id) => {

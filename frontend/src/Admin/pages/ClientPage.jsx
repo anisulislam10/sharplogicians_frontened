@@ -43,7 +43,7 @@ const Client  = () => {
 
     return (
         <div className="menu-content">
-            <button className="add-btn" onClick={() => navigate("/admin/client/add-client")}>Add Client</button>
+            <button className="add-btn" onClick={() => navigate("/old/admin/client/add-client")}>Add Client</button>
             {loading ? (
                 <p>Loading...</p> // Show loading message while fetching data
             ) : (

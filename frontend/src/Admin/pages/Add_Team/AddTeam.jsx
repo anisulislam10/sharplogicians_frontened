@@ -37,7 +37,7 @@ const AddTeam = () => {
     
             // Send the FormData to the backend
             await postTeam(data);
-            navigate("/admin/team"); // Navigate on success
+            navigate("/old/admin/team"); // Navigate on success
         } catch (error) {
             const errorMessage =
                 error.response?.data?.message || "An error occurred while saving the Team";
@@ -100,7 +100,7 @@ const AddTeam = () => {
                 onChange={handleInputChange} // No value attribute here as file input does not support it
             />
             <button type="button" onClick={handleSave}>Save</button>
-            <button type="button" onClick={() => navigate("/admin/team")}>Cancel</button>
+            <button type="button" onClick={() => navigate("/old/admin/team")}>Cancel</button>
         </div>
     );
 };

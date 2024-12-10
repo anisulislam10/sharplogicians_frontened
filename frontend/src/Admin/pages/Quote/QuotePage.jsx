@@ -42,7 +42,7 @@ const Quote  = () => {
 
     return (
         <div className="menu-content">
-            <button className="add-btn" onClick={() => navigate("/admin/quote/add-quote")}>Add Quote Service</button>
+            <button className="add-btn" onClick={() => navigate("/old/admin/quote/add-quote")}>Add Quote Service</button>
             {loading ? (
                 <p>Loading...</p> // Show loading message while fetching data
             ) : (

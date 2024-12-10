@@ -56,7 +56,7 @@ const AddService = () => {
 
             // Send the FormData to the backend
             await postServices(data);
-            navigate("/admin/services"); // Navigate on success
+            navigate("/old/admin/services"); // Navigate on success
         } catch (error) {
             const errorMessage =
                 error.response?.data?.message || "An error occurred while saving the service.";
@@ -139,7 +139,7 @@ const AddService = () => {
             <button type="button" onClick={handleSave}>
                 Save
             </button>
-            <button type="button" onClick={() => navigate("/admin/service")}>
+            <button type="button" onClick={() => navigate("/old/admin/service")}>
                 Cancel
             </button>
         </div>

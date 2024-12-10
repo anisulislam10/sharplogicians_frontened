@@ -88,7 +88,7 @@ const EditPortfolio = () => {
     try {
       await updatePortfolio(id, formData) // Call API to update Portfolio
       alert('Portfolio updated successfully')
-      navigate('/admin/portfolio') // Redirect to Portfolio list
+      navigate('/old/admin/portfolio') // Redirect to Portfolio list
     } catch (error) {
       console.error('Error updating Portfolio:', error)
       alert('Failed to update Portfolio')

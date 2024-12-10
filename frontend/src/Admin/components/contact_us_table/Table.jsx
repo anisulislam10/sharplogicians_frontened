@@ -9,7 +9,7 @@ const Table = ({ data = [], type, setData }) => {
 
     const handleEdit = (id) => {
         // Navigate to edit page
-        navigate(`/admin/contact/edit-contact/${id}`);
+        navigate(`/old/admin/contact/edit-contact/${id}`);
     };
 
     const handleDelete = async (id) => {

@@ -55,7 +55,7 @@ const AddPortfolio = () => {
 
       // Send the form data to the backend
       await postPortfolio(data); // Submit the form data to API
-      navigate("/admin/portfolio"); // Redirect to portfolio page after success
+      navigate("/old/admin/portfolio"); // Redirect to portfolio page after success
     } catch (error) {
       const errorMessage = error.response?.data?.message || "An error occurred while saving the portfolio.";
       alert(errorMessage);
@@ -148,7 +148,7 @@ const AddPortfolio = () => {
       /> */}
 
       <button type="button" onClick={handleSave}>Save</button>
-      <button type="button" onClick={() => navigate("/admin/portfolio")}>Cancel</button>
+      <button type="button" onClick={() => navigate("/old/admin/portfolio")}>Cancel</button>
     </div>
   );
 };

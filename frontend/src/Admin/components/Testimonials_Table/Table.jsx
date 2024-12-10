@@ -12,7 +12,7 @@ const  Table= ({ data = [], type, setData }) => {
         console.log("Navigating to edit Testimonial with ID:", id); // Debugging
 
         // Navigate to edit page
-        navigate(`/admin/testimonial/edit-testimonial/${id}`);
+        navigate(`/old/admin/testimonial/edit-testimonial/${id}`);
     };
 
     const handleDelete = async (id) => {

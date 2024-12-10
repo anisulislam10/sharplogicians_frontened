@@ -51,7 +51,7 @@ const EditQuote = () => {
         try {
             await updateQuote(id, quote); // Call API to update Quote
             alert("Quote updated successfully");
-            navigate("/admin/quote"); // Redirect to Quote list
+            navigate("/old/admin/quote"); // Redirect to Quote list
         } catch (error) {
             console.error("Error updating Quote:", error);
             alert("Failed to update Quote");

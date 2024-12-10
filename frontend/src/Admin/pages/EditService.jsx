@@ -88,7 +88,7 @@ const EditService = () => {
     try {
       await updateService(id, formData); // Call API to update Service
       alert("Portfolio updated successfully");
-      navigate("/admin/services"); // Redirect to Service list
+      navigate("/old/admin/services"); // Redirect to Service list
     } catch (error) {
       console.error("Error updating Service:", error);
     }

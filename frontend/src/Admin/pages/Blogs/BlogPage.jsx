@@ -38,7 +38,7 @@ const Blog = () => {
 
     return (
         <div className="menu-content">
-            <button className="add-btn" onClick={() => navigate("/admin/blog/add-blog")}>Add Blog </button>
+            <button className="add-btn" onClick={() => navigate("/old/admin/blog/add-blog")}>Add Blog </button>
             {loading ? <p>Loading...</p> : <Table data={about} setData={setAbout} type="blog" />}
             <Pagination
                 currentPage={currentPage}

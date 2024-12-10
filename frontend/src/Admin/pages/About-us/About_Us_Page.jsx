@@ -42,7 +42,7 @@ const About = () => {
 
     return (
         <div className="menu-content">
-            <button className="add-btn" onClick={() => navigate("/admin/about/add-about")}>Add About </button>
+            <button className="add-btn" onClick={() => navigate("/old/admin/about/add-about")}>Add About </button>
             {loading ? <p>Loading...</p> : <Table data={about} setData={setAbout} type="about" />}
             <Pagination
                 currentPage={currentPage}

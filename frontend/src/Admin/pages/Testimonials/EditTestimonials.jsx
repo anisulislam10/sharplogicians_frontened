@@ -66,7 +66,7 @@ const EditTestimonial = () => {
         try {
             await updateTestimonial(id, formData); // Call API to update Team
             alert("Testimonial updated successfully");
-            navigate("/admin/testimonial"); // Redirect to Team list
+            navigate("/old/admin/testimonial"); // Redirect to Team list
         } catch (error) {
             console.error("Error updating Testimonial:", error);
             alert("Failed to update Testimonial");

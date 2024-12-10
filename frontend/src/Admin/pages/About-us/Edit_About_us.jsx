@@ -64,7 +64,7 @@ const EditAbout = () => {
         try {
             await updateAbout(id, formData); // Call API to update about
             alert("About page updated successfully");
-            navigate("/admin/about"); // Redirect to about list
+            navigate("/old/admin/about"); // Redirect to about list
         } catch (error) {
             console.error("Error updating about:", error);
             alert("Failed to update about");

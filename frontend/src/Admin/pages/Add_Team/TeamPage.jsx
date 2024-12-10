@@ -38,7 +38,7 @@ const Team = () => {
 
     return (
         <div className="menu-content">
-            <button className="add-btn" onClick={() => navigate("/admin/team/add-team")}>Add Team </button>
+            <button className="add-btn" onClick={() => navigate("/old/admin/team/add-team")}>Add Team </button>
             {loading ? <p>Loading...</p> : <Table data={about} setData={setAbout} type="team" />}
             <Pagination
                 currentPage={currentPage}

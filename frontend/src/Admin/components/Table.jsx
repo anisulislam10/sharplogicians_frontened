@@ -13,7 +13,7 @@ const Table = ({ data = [], type, setData }) => {
     };
 
     const handleEdit = (id) => {
-        navigate(`/admin/service/edit-service/${id}`);
+        navigate(`/old/admin/service/edit-service/${id}`);
     };
 
     const handleDelete = async (id) => {

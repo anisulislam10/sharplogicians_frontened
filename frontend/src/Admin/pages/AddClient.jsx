@@ -31,7 +31,7 @@ const AddClient = () => {
       // Send the form data to the backend
       await postClient(data); // Pass the FormData to the API postportfolio function
       // console.log("Portfolio saved successfully:", formData);
-      navigate("/admin/clients"); // Navigate to portfolio page after success
+      navigate("/old/admin/clients"); // Navigate to portfolio page after success
     } catch (error) {
       // Show the error message in an alert
       const errorMessage = error.response?.data?.message || "An error occurred while saving the Client.";
@@ -52,7 +52,7 @@ const AddClient = () => {
       />
       
       <button type="button" onClick={handleSave}>Save</button>
-      <button type="button" onClick={() => navigate("/admin/client")}>Cancel</button>
+      <button type="button" onClick={() => navigate("/old/admin/client")}>Cancel</button>
     </div>
   );
 };

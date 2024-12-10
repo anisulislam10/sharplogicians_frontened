@@ -24,7 +24,7 @@ const AddQuote = () => {
 
       // Check if the response is successful and navigate accordingly
       if (response.status === 200) {
-        navigate("/admin/quote"); // Redirect to quote page after success
+        navigate("/old/admin/quote"); // Redirect to quote page after success
       } else {
         alert("Error saving the quote");
       }
@@ -51,7 +51,7 @@ const AddQuote = () => {
         <button type="button" onClick={handleSave}>
           Save
         </button>
-        <button type="button" onClick={() => navigate("/admin/quote")}>
+        <button type="button" onClick={() => navigate("/old/admin/quote")}>
           Cancel
         </button>
       </div>

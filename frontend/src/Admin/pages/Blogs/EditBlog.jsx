@@ -88,7 +88,7 @@ const EditBlog = () => {
         try {
             await updateBlog(id, formData); // Call API to update Blog
             alert("Blog updated successfully");
-            navigate("/admin/blog"); // Redirect to Blog list
+            navigate("/old/admin/blog"); // Redirect to Blog list
         } catch (error) {
             console.error("Error updating Blog:", error);
             alert("Failed to update Blog");

@@ -11,7 +11,7 @@ const Table = ({ data = [], type, setData }) => {
         console.log("Navigating to edit page with ID:", id); // Debugging
 
         // Navigate to edit page
-        navigate(`/admin/team/edit-team/${id}`);
+        navigate(`/old/admin/team/edit-team/${id}`);
     };
 
     const handleDelete = async (id) => {

@@ -38,7 +38,7 @@ const Services = () => {
 
     return (
         <div className="menu-content">
-            <button className="add-btn" onClick={() => navigate("/admin/service/add-service")}>Add Service</button>
+            <button className="add-btn" onClick={() => navigate("/old/admin/service/add-service")}>Add Service</button>
             {loading ? <p>Loading...</p> : <Table data={services} setData={setServices} type="services" />}
             <Pagination
                 currentPage={currentPage}

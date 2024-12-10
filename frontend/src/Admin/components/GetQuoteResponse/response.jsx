@@ -9,7 +9,7 @@ const Table = ({ data = [], type, setData }) => {
 
     const handleView = (id) => {
         console.log("Navigating to view page with ID:", id);
-        navigate(`/admin/quote/view-quote/${id}`); // Navigate to the view page
+        navigate(`/old/admin/quote/view-quote/${id}`); // Navigate to the view page
     };
 
     const handleDelete = async (id) => {
@@ -18,7 +18,7 @@ const Table = ({ data = [], type, setData }) => {
             if (result.status) {
                 setData((prevData) => prevData.filter((item) => item._id !== id));
                 alert("Quote deleted successfully");
-            navigate("/admin/quote-res")
+            navigate("/old/admin/quote-res")
 
             } else {
                 alert(result.message || "Error deleting Quote");

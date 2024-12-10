@@ -61,7 +61,7 @@ const EditContact = () => {
         try {
             await updateContact(id, formData); // Call API to update client
             alert("contact updated successfully");
-            navigate("/admin/contact"); // Redirect to client list
+            navigate("/old/admin/contact"); // Redirect to client list
         } catch (error) {
             console.error("Error updating contact:", error);
             alert("Failed to update contact");

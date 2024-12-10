@@ -42,7 +42,7 @@ const Portfolio  = () => {
 
     return (
         <div className="menu-content">
-            <button className="add-btn" onClick={() => navigate("/admin/portfolio/add-portfolio")}>Add Portfolio</button>
+            <button className="add-btn" onClick={() => navigate("/old/admin/portfolio/add-portfolio")}>Add Portfolio</button>
             {loading ? (
                 <p>Loading...</p> // Show loading message while fetching data
             ) : (

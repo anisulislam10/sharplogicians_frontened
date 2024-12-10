@@ -21,7 +21,7 @@ const Team = ({ column = "col-lg-4 col-md-6 col-sm-12" }) => {
   useEffect(() => {
     const fetchTeamData = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/admin/team/get");
+        const response = await axios.get("http://localhost:3000/api/oldadmin/team/get");
         setTeam(response.data.ourTeam);
       } catch (error) {
         console.error("Error fetching team data:", error);

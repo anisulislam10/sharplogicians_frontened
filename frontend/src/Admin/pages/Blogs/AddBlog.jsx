@@ -46,7 +46,7 @@ const AddBlog = () => {
 
       await postBlog(data);
       alert("Blog added successfully");
-      navigate("/admin/blog");
+      navigate("/old/admin/blog");
     } catch (error) {
       const errorMessage =
         error.response?.data?.message || "An error occurred while saving the Blog";

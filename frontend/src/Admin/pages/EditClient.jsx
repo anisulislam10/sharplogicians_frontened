@@ -56,7 +56,7 @@ const EditClient = () => {
         try {
             await updateclient(id, formData); // Call API to update client
             alert("client updated successfully");
-            navigate("/admin/clients"); // Redirect to client list
+            navigate("/old/admin/clients"); // Redirect to client list
         } catch (error) {
             console.error("Error updating client:", error);
             alert("Failed to update client");

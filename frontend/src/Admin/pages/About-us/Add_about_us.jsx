@@ -32,7 +32,7 @@ const AddAbout = () => {
     
             // Send the FormData to the backend
             await postAbout(data);
-            navigate("/admin/about"); // Navigate on success
+            navigate("/old/admin/about"); // Navigate on success
         } catch (error) {
             const errorMessage =
                 error.response?.data?.message || "An error occurred while saving the about page.";
@@ -77,7 +77,7 @@ const AddAbout = () => {
                 onChange={handleInputChange} // No value attribute here as file input does not support it
             />
             <button type="button" onClick={handleSave}>Save</button>
-            <button type="button" onClick={() => navigate("/admin/about")}>Cancel</button>
+            <button type="button" onClick={() => navigate("/old/admin/about")}>Cancel</button>
         </div>
     );
 };

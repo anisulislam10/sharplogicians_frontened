@@ -22,7 +22,7 @@ const Table = ({ data = [], type, setData }) => {
   const handleEdit = id => {
     console.log('Navigating to edit blog with ID:', id)
 
-    navigate(`/admin/blog/edit-blog/${id}`)
+    navigate(`/old/admin/blog/edit-blog/${id}`)
   }
 
   const handleDelete = async id => {
@@ -37,7 +37,7 @@ const Table = ({ data = [], type, setData }) => {
         
         
        alert('Blog deleted successfully')
-        navigate("/admin/blog");
+        navigate("/old/admin/blog");
 
       } else {
         alert(result.message || 'Error deleting Blog')

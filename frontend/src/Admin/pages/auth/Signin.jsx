@@ -37,7 +37,7 @@ const SignIn = ({ onSignIn }) => {
             // Mock behavior to simulate successful sign-in
             alert("Sign-In Successful");
             onSignIn(); // Update the authentication state in App
-            navigate("/admin/services"); // Redirect to /services
+            navigate("/old/admin/services"); // Redirect to /services
         } catch (err) {
             setError(err.message);
         }
