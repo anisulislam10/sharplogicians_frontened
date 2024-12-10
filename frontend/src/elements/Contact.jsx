@@ -32,7 +32,7 @@ class Contact extends Component {
   // Fetch contact data from the API
   componentDidMount() {
     axios
-      .get("http://localhost:3000/api/old/admin/contact/get")
+      .get(`https://sharplogicians.com/new/api/old/admin/contact/get`)
       .then((response) => {
         if (response.data.status) {
           this.setState({
