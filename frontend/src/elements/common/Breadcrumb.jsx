@@ -24,8 +24,8 @@ class Breadcrumb extends Component {
                     ) : (
                       ""
                     )}
-                    <li className="breadcrumb-item active">{title}</li>
-                  </ul>
+                    <li style={{background:"none", }} className="breadcrumb-item active">{title}</li>
+                    </ul>
                 </div>
               </div>
             </div>
