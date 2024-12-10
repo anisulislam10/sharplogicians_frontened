@@ -100,7 +100,16 @@ const AddPortfolio = () => {
         <option value="Magento">Magento</option>
         <option value="Wordpress">Wordpress</option>
         <option value="Drupal">Drupal</option>
-        <option value="React">React</option>
+        <option value="Android_App">Android Application</option>
+        <option value="Ios_App">iOS Application</option>
+        <option value="Oddo">Oddo</option>
+        <option value="Digital_Marketing">Digital Marketing</option>
+        <option value="SEO">SEO</option>
+
+
+
+
+
       </select>
 
       <select

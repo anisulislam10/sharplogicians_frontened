@@ -3,7 +3,7 @@ import process from "process";
 
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL_CONTACT;
-console.log("Contact base url:", API_BASE_URL)
+// console.log("Contact base url:", API_BASE_URL)
 // console.log('Environment:', process.env);
 
 // Fetch all Clients with pagination
@@ -27,7 +27,7 @@ export const deleteContact = async (id) => {
         const response = await axios.delete(`${API_BASE_URL}/delete/${id}`);
         return response.data;  // Return response data if delete is successful
     } catch (error) {
-        console.error("Error deleting Contact:", error);
+        // console.error("Error deleting Contact:", error);
         throw new Error("Error deleting Contact: " + error.response?.data?.message || error.message);
     }
 };

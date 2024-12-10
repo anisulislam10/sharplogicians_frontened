@@ -22,6 +22,29 @@ const [Value, setValue] = useState()
   
  
     return (
+      <>
+       (
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>Contact Us | SharpLogicians | Creative Digital Agency</title>
+      <meta
+        name="description"
+        content="Around - Multipurpose Bootstrap Template"
+      />
+      <meta
+        name="keywords"
+        content="bootstrap, business, consulting, coworking space, services, creative agency, dashboard, e-commerce, mobile app showcase, multipurpose, product landing, shop, software, ui kit, web studio, landing, html5, css3, javascript, gallery, slider, touch, creative"
+      />
+      <meta name="author" content="Createx Studio" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+      <link rel="manifest" href="site.webmanifest" />
+      <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab.svg" />
+      <meta name="msapplication-TileColor" content="#766df4" />
+      <meta name="theme-color" content="#ffffff" />
+    </Helmet>
       <div className="contact-form--1">
         <div className="container">
           <div className="row row--35 align-items-start">
@@ -29,8 +52,7 @@ const [Value, setValue] = useState()
               <div className="section-title text-left mb--50">
                 <h2 className="title">Contact Us.</h2>
                 <p className="description" style={{textAlign:'left'}}> 
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Architecto cupiditate aperiam neque.
+                  
                 </p>
               </div>
               <div className="form-wrapper">
@@ -56,6 +78,8 @@ const [Value, setValue] = useState()
           </div>
         </div>
       </div>
+
+      </>
     );
   }
 

@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 
@@ -29,6 +30,28 @@ const ServiceThree = ({ column, item }) => {
     const ServiceContent = servicesData.slice(0, item);
   
     return (
+      <>
+       <Helmet>
+      <meta charSet="utf-8" />
+      <title>Services | SharpLogicians | Creative Digital Agency</title>
+      <meta
+        name="description"
+        content="Around - Multipurpose Bootstrap Template"
+      />
+      <meta
+        name="keywords"
+        content="bootstrap, business, consulting, coworking space, services, creative agency, dashboard, e-commerce, mobile app showcase, multipurpose, product landing, shop, software, ui kit, web studio, landing, html5, css3, javascript, gallery, slider, touch, creative"
+      />
+      <meta name="author" content="Createx Studio" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+      <link rel="manifest" href="site.webmanifest" />
+      <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab.svg" />
+      <meta name="msapplication-TileColor" content="#766df4" />
+      <meta name="theme-color" content="#ffffff" />
+    </Helmet>
       <div className="row">
       {ServiceContent.map((service, i) => (
         <div className={`col-lg-4 col-md-4 col-sm-4 col-12 ${column}`} key={i}>
@@ -57,7 +80,7 @@ const ServiceThree = ({ column, item }) => {
       ))}
     </div>
     
-    
+    </>
 
     );
   };

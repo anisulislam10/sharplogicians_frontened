@@ -30,8 +30,7 @@ import AboutTeam from './elements/team/AboutTeam'
 import { Route, Routes } from "react-router-dom";
 import Mainpage from "./Admin/Mainpage";
 import SignIn from "./Admin/pages/auth/Signin";
-import AboutUs from "./home/AboutUs";
-import Team from "./elements/Team";
+
 import Contact from "./elements/Contact";
 import QuoteForm from "./component/header/QuoteForm";
 

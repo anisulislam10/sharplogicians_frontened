@@ -75,6 +75,29 @@ import RandomRroject from './RandomProjects'
 
       
       <React.Fragment>
+         <Helmet>
+      <meta charSet="utf-8" />
+      <title>Portfolio | SharpLogicians | Creative Digital Agency</title>
+      <meta
+        name="description"
+        content="Around - Multipurpose Bootstrap Template"
+      />
+      <meta
+        name="keywords"
+        content="bootstrap, business, consulting, coworking space, services, creative agency, dashboard, e-commerce, mobile app showcase, multipurpose, product landing, shop, software, ui kit, web studio, landing, html5, css3, javascript, gallery, slider, touch, creative"
+      />
+      <meta name="author" content="Createx Studio" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+      <link rel="manifest" href="site.webmanifest" />
+      <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab.svg" />
+      <meta name="msapplication-TileColor" content="#766df4" />
+      <meta name="theme-color" content="#ffffff" />
+      {/* Page loading styles */}
+    
+    </Helmet>
         <PageHelmet pageTitle="Portfolio Details" />
 
         <Header

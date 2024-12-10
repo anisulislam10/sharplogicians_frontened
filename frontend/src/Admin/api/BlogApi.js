@@ -1,7 +1,6 @@
 import axios from "axios";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL_BLOG;
-console.log("API_BASE_URL_BLOG",API_BASE_URL )
 // Fetch about us
 export const fetchBlog = (page = 1, limit = 5) => {
     return axios.get(`${API_BASE_URL}/get`, {

@@ -1,0 +1,6 @@
+# Allow all crawlers to access everything except the admin section
+User-agent: *
+Disallow: /admin/
+
+# Specify the location of your sitemap
+Sitemap: https://www.sharplogicians.com/sitemap.xml

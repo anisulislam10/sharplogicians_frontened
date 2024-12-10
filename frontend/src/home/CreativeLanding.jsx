@@ -16,13 +16,10 @@ import BrandTwo from "../elements/BrandTwo";
 import FooterTwo from "../component/footer/FooterTwo";
 import Contact from "../elements/contact/ContactTwo";
 import Helmet from "../component/common/Helmet";
-
 import logoLight from "../assets/images/logo/logo-white.png";
 import logoAllDark from "../assets/images/logo/logo-dark.png";
-import aboutImg from "../assets/images/about/about-3.jpg";
 import ScrollSpy from "../component/common/ScrollSpy";
 import AboutUs from "./AboutUs";
-import QuoteForm from "../component/header/QuoteForm";
 import bgImage from './../../src/assets/images/bg/bg-image-26.jpg'
 
 const SlideList = [
@@ -142,8 +139,26 @@ class CreativeLanding extends Component {
 
     return (
       <Fragment>
-        <Helmet pageTitle="Sharplogicians | Creative Digital" />
-        {/* Start Header Area  */}
+
+ (
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>SharpLogicians | Creative Digital Agency</title>
+      <meta name="description" content="SharpLogicians | Creative Digital Agency" />
+      <meta
+        name="keywords"
+        content="bootstrap, business, consulting, coworking space, services, creative agency, dashboard, e-commerce, mobile app showcase, multipurpose, product landing, shop, software, ui kit, web studio, landing, html5, css3, javascript, gallery, slider, touch, creative"
+      />
+      <meta name="author" content="Createx Studio" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+      <link rel="manifest" href="site.webmanifest" />
+      <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab.svg" />
+      <meta name="msapplication-TileColor" content="#766df4" />
+      <meta name="theme-color" content="#ffffff" />
+    </Helmet>        {/* Start Header Area  */}
         <header className="header-area formobile-menu header--fixed default-color">
           <div className="header-wrapper" id="header-wrapper">
             <div className="header-left">
@@ -210,46 +225,34 @@ class CreativeLanding extends Component {
            backgroundRepeat: 'no-repeat',
            backgroundPosition: 'center',
   }}>
-            {SlideList.map((value, index) => (
-              <div
-                className="slide slide-style-2 slider-paralax d-flex align-items-center justify-content-center"
-                key={index}
-              >
-                <div className="container">
-                  <div className="row">
-                    <div className="col-lg-12">
-                      <div className={`inner ${value.textPosition}`}>
-                        {value.category ? <span>{value.category}</span> : ""}
-                        {value.title ? (
-                          <h1 className="title theme-gradient">
-                            {value.title}
-                          </h1>
-                        ) : (
-                          ""
-                        )}
-                        {value.description ? (
-                          <p className="description">{value.description}</p>
-                        ) : (
-                          ""
-                        )}
-                        {value.buttonText ? (
-                          <div className="slide-btn">
-                            <a
-                              className="rn-button-style--2 btn-primary-color"
-                              href={`${value.buttonLink}`}
-                            >
-                              {value.buttonText}
-                            </a>
-                          </div>
-                        ) : (
-                          ""
-                        )}
-                      </div>
-                    </div>
-                  </div>
+           {SlideList.map((value, index) => (
+  <React.Suspense fallback={<div>Loading...</div>}>
+    <div
+      className="slide slide-style-2 slider-paralax d-flex align-items-center justify-content-center"
+      key={index}
+    >
+               <div className={`inner ${value.textPosition}`}>
+      {value.category && <span>{value.category}</span>}
+      {value.title && (
+        <h1 className="title theme-gradient">{value.title}</h1>
+      )}
+      {value.description && (
+        <p className="description">{value.description}</p>
+      )}
+      {value.buttonText && (
+        <div className="slide-btn">
+          <a
+            className="rn-button-style--2 btn-primary-color"
+            href={value.buttonLink}
+          >
+            {value.buttonText}
+          </a>
+        </div>
+      )}
+    </div>
                 </div>
-              </div>
-            ))}
+                </React.Suspense>
+              ))}
           </div>
         </div>
         {/* End Slider Area   */}
@@ -294,8 +297,7 @@ class CreativeLanding extends Component {
                   <div className="section-title service-style--3 text-left mb--15 mb_sm--0">
                     <h2 className="title">Our Portfolio</h2>
                     <p style={{textAlign:'left'}}>
-                      There are many variations of passages of Lorem Ipsum
-                      available, but the majority have suffered alteration.
+                     
                     </p>
                   </div>
                 </div>
@@ -369,8 +371,7 @@ class CreativeLanding extends Component {
                 <div className="section-title service-style--3 text-left mb--25 mb_sm--0">
                   <h2 className="title">Skilled Team</h2>
                   <p style={{textAlign:'left'}}>
-                    There are many variations of passages of Lorem Ipsum
-                    available, but the majority have suffered alteration.
+                    
                   </p>
                 </div>
               </div>
@@ -401,8 +402,7 @@ class CreativeLanding extends Component {
         <div className="section-title text-left">
           <h2>Latest News</h2>
           <p style={{textAlign:'left'}}>
-            There are many variations of passages of Lorem Ipsum
-            available, but the majority have suffered alteration.
+            
           </p>
         </div>
       </div>

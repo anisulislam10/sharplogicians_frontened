@@ -3,7 +3,6 @@ import process from "process";
 
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL_CLIENT;
-console.log("client base url:", API_BASE_URL)
 // console.log('Environment:', process.env);
 
 // Fetch all Clients with pagination
@@ -27,7 +26,6 @@ export const deleteClient = async (id) => {
         const response = await axios.delete(`${API_BASE_URL}/delete/${id}`);
         return response.data;  // Return response data if delete is successful
     } catch (error) {
-        console.error("Error deleting client:", error);
         throw new Error("Error deleting client: " + error.response?.data?.message || error.message);
     }
 };
