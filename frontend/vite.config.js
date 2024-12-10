@@ -13,7 +13,7 @@ cssInjectedByJsPlugin(),
 
    ViteSitemap({
       hostname: 'https://yourwebsite.com',
-    }),
+    }),  
 
 
  viteCompression({
