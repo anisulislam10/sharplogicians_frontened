@@ -59,12 +59,12 @@ function App() {
 
          
           {/* Element Layout */}
-          <Route path={`old/service`} element={<Service />} />
-          <Route path={"old/service-details/:id"} element={<ServiceDetails />} />
+          <Route path={`/old/service`} element={<Service />} />
+          <Route path={"/old/service-details/:id"} element={<ServiceDetails />} />
           
-          <Route path={`old/portfolio-details/:id`} element={<PortfolioDetails />} />
-          <Route path={`old/blog`} element={<Blog />} />
-          <Route path={`old/blog-details/:id`} element={<BlogDetails />} />
+          <Route path={`/old/portfolio-details/:id`} element={<PortfolioDetails />} />
+          <Route path={`/old/blog`} element={<Blog />} />
+          <Route path={`/old/blog-details/:id`} element={<BlogDetails />} />
           {/* <Route path={`old/testimonial/:id`} element={<Testimonial />} /> */}
 
           
