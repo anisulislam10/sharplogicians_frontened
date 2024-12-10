@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component, Fragment,useRef } from "react";
 import axios from 'axios';
 
 import Slider from "react-slick";
@@ -50,11 +50,17 @@ class CreativeLanding extends Component {
       isLoading: true,
       error: null,
       isBlogLoading:true,
-      blogError:null
+      blogError:null,
+      loaded: false,
+      inViewport: false,
+
+
     };
+    // this.handleImageLoad = this.handleImageLoad.bind(this);
+
+    this.sliderRef = React.createRef();
 
    
-  
 
 
     //  this.subMetuTrigger = this.subMetuTrigger.bind(this);
@@ -92,20 +98,34 @@ class CreativeLanding extends Component {
         .catch(error => {
           this.setState({ blogs: [], blogError: error, isBlogLoading: false });
         });
-      // Call the method to fetch blog data
-    }
+
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              this.setState({ inViewport: true });
+            }
+          });
+        }, { threshold: 0.5 });
+    
+        observer.observe(this.sliderRef.current);
+      }
+    
+    
     
     // New method to fetch blog data
     
-
-
+    handleImageLoad = () => {
+      this.setState({ loaded: true });
+    };
+  
 
   render() {
 
 
 //for dynamic items for portfolio
-    const { data,blogs, isLoading, error } = this.state;
-
+    const { data,blogs, isLoading, error,loaded,inViewport  } = this.state;
+   
     // if (error) {
     //   return <div>Error: {error.message}</div>;
     // }
@@ -136,11 +156,19 @@ class CreativeLanding extends Component {
         };
       }
     }
+    const bgStyle = inViewport ? {
+      backgroundImage: `url(${bgImage})`,
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+      opacity: loaded ? 1 : 0,
+      transition: 'opacity 1s ease-in-out',
+    } : {};
 
     return (
       <Fragment>
 
- 
+
     <Helmet>
       <meta charSet="utf-8" />
       <title>SharpLogicians | Creative Digital Agency</title>
@@ -215,47 +243,39 @@ class CreativeLanding extends Component {
           </div>
         </header>
         {/* End Header Area  */}
+        <div ref={this.sliderRef} className="slider-activation slider-creative-agency" id="home">
 
-        {/* Start Slider Area   */}
-        <div className="slider-activation slider-creative-agency" id="home">
-          <div  data-black-overlay="6" style={{
-           backgroundImage: `url(${bgImage})`,
+        <div
+          data-black-overlay="6"
+          style={bgStyle}
+        >
+          <img
+            src={bgImage}
+            alt="Background"
+            style={{ display: 'none' }}
+            onLoad={this.handleImageLoad}
+          />
 
-           backgroundSize: 'cover',
-           backgroundRepeat: 'no-repeat',
-           backgroundPosition: 'center',
-  }}
-  loading="lazy" // This ensures lazy loading of the image if you use an <img> tag inside the div
->
-           {SlideList.map((value, index) => (
-  <React.Suspense fallback={<div>Loading...</div>}>
-    <div
-      className="slide slide-style-2 slider-paralax d-flex align-items-center justify-content-center"
-      key={index}
-    >
-               <div className={`inner ${value.textPosition}`}>
-      {value.category && <span>{value.category}</span>}
-      {value.title && (
-        <h1 className="title theme-gradient">{value.title}</h1>
-      )}
-      {value.description && (
-        <p className="description">{value.description}</p>
-      )}
-      {value.buttonText && (
-        <div className="slide-btn">
-          <a
-            className="rn-button-style--2 btn-primary-color"
-            href={value.buttonLink}
-          >
-            {value.buttonText}
-          </a>
+          {SlideList.map((value, index) => (
+            <div
+              className="slide slide-style-2 slider-paralax d-flex align-items-center justify-content-center"
+              key={index}
+            >
+              <div className={`inner ${value.textPosition}`}>
+                {value.category && <span>{value.category}</span>}
+                {value.title && <h1 className="title theme-gradient">{value.title}</h1>}
+                {value.description && <p className="description">{value.description}</p>}
+                {value.buttonText && (
+                  <div className="slide-btn">
+                    <a className="rn-button-style--2 btn-primary-color" href={value.buttonLink}>
+                      {value.buttonText}
+                    </a>
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
         </div>
-      )}
-    </div>
-                </div>
-                </React.Suspense>
-              ))}
-          </div>
         </div>
         {/* End Slider Area   */}
 
@@ -285,6 +305,7 @@ class CreativeLanding extends Component {
        <>
        <AboutUs/>
        </>
+       
         {/* End About Area */}
 
         {/* Start Portfolio Area */}
@@ -313,7 +334,7 @@ class CreativeLanding extends Component {
       <div className="portfolio" key={index}>
         <div className="thumbnail-inner">
           <div >
-            <img className="thumbnaiss" src={item.image} alt={item.title} style={{height:'580px'}}/>
+            <Image className="thumbnail" src={item.image} alt={item.title} />
           </div>
         </div>
         <div className="content">
