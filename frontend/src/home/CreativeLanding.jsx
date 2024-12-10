@@ -140,7 +140,7 @@ class CreativeLanding extends Component {
     return (
       <Fragment>
 
- (
+ 
     <Helmet>
       <meta charSet="utf-8" />
       <title>SharpLogicians | Creative Digital Agency</title>
