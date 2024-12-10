@@ -15,12 +15,12 @@ import BlogContent from "../elements/blog/BlogContent";
 import BrandTwo from "../elements/BrandTwo";
 import FooterTwo from "../component/footer/FooterTwo";
 import Contact from "../elements/contact/ContactTwo";
-import Helmet from "../component/common/Helmet";
 import logoLight from "../assets/images/logo/logo-white.png";
 import logoAllDark from "../assets/images/logo/logo-dark.png";
 import ScrollSpy from "../component/common/ScrollSpy";
 import AboutUs from "./AboutUs";
 import bgImage from './../../src/assets/images/bg/bg-image-26.jpg'
+import { Helmet } from "react-helmet-async";
 
 const SlideList = [
   {
