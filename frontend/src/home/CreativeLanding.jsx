@@ -318,10 +318,10 @@ class CreativeLanding extends Component {
           <div className="inner">
             <p style={{ textAlign: "left" }}>{item.type}</p>
             <h4>
-              <Link to={`portfolio-details/${item._id}`}>{item.title}</Link>
+              <Link to={`/old/portfolio-details/${item._id}`}>{item.title}</Link>
             </h4>
             <div className="portfolio-button">
-                                <Link className="rn-btn" to={`/portfolio-details/${item._id}`}>
+                                <Link className="rn-btn" to={`/old/portfolio-details/${item._id}`}>
                                   Case Study
                                 </Link>
                               </div>
@@ -415,17 +415,17 @@ class CreativeLanding extends Component {
       <div key={index}>
         <div className="blog blog-style--1">
           <div className="thumbnail">
-            <Link to={`/blog-details/${item._id}`}>
+            <Link to={`/old/blog-details/${item._id}`}>
               <img src={item.image} alt="Blog Images" />
             </Link>
           </div>
           <div className="content">
             <p className="blogtype" style={{textAlign:'left'}}>{item.author}</p>
             <h4 className="title">
-              <Link to={`/blog-details/${item._id}`}>{item.title}</Link>
+              <Link to={`/old/blog-details/${item._id}`}>{item.title}</Link>
             </h4>
             <div className="blog-btn">
-              <Link to={`/blog-details/${item._id}`} className="rn-btn text-white">
+              <Link to={`/old/blog-details/${item._id}`} className="rn-btn text-white">
                 Read More
               </Link>
             </div>

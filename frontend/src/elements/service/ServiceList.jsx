@@ -55,7 +55,7 @@ const ServiceThree = ({ column, item }) => {
       <div className="row">
       {ServiceContent.map((service, i) => (
         <div className={`col-lg-4 col-md-4 col-sm-4 col-12 ${column}`} key={i}>
-          <Link to={`/service-details/${service._id}`}>
+          <Link to={`/old/service-details/${service._id}`}>
             <div className="service service__style--2" style={{ width: '100%', height: 'auto' }}>
               {/* Display the service image */}
               <div className="icon" style={{ marginBottom: '10px', marginLeft:'14px' }}> {/* Adjust margin to reduce space */}

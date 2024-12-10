@@ -61,7 +61,6 @@ class Portfolio extends Component{
                                 <div className="col-lg-12">
                                     <div className="section-title service-style--3 text-center mb--15">
                                         <h2 className="title">Featured</h2>
-                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
                                     </div>
                                 </div>
                             </div>
@@ -78,7 +77,7 @@ class Portfolio extends Component{
                                                     <div className="content">
                                                         <div className="inner">
                                                             <p>{value.category}</p>
-                                                            <h4><a href="/portfolio-details">{value.title}</a></h4>
+                                                            <h4><a href="/old/portfolio-details">{value.title}</a></h4>
                                                             <div className="portfolio-button">
                                                                 <a className="rn-btn" href="/portfolio-details">Case Study</a>
                                                             </div>
@@ -104,7 +103,6 @@ class Portfolio extends Component{
                                 <div className="col-lg-12">
                                     <div className="section-title text-center service-style--3 mb--30">
                                         <h2 className="title">All Works</h2>
-                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
                                     </div>
                                 </div>
                             </div>
@@ -114,7 +112,7 @@ class Portfolio extends Component{
                             <div className="row">
                                 <div className="col-lg-12">
                                     <div className="view-more-btn mt--60 text-center">
-                                        <a className="rn-button-style--2 btn-solid" href="/portfolio"><span>View More Project</span></a>
+                                        <a className="rn-button-style--2 btn-solid" href="/old/portfolio"><span>View More Project</span></a>
                                     </div>
                                 </div>
                             </div>
