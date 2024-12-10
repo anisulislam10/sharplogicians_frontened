@@ -47,31 +47,31 @@ function App() {
     <>
       <Routes>
         
-        <Route path="/">
+        <Route path="old/">
           {/* Only CreativeLanding is now used */}
           <Route index element={<CreativeLanding />} />
           
-          <Route path={`about`} element={<About />} />
-          <Route path={`team`} element={<AboutTeam />} />
-          <Route path={`contact`} element={<Contact />} />
-          <Route path={`quote`} element={<QuoteForm />} />
+          <Route path={`old/about`} element={<About />} />
+          <Route path={`old/team`} element={<AboutTeam />} />
+          <Route path={`old/contact`} element={<Contact />} />
+          <Route path={`old/quote`} element={<QuoteForm />} />
 
           
 
          
           {/* Element Layout */}
-          <Route path={`service`} element={<Service />} />
-          <Route path={"service-details/:id"} element={<ServiceDetails />} />
+          <Route path={`old/service`} element={<Service />} />
+          <Route path={"old/service-details/:id"} element={<ServiceDetails />} />
           
-          <Route path={`portfolio-details/:id`} element={<PortfolioDetails />} />
-          <Route path={`blog`} element={<Blog />} />
-          <Route path={`blog-details/:id`} element={<BlogDetails />} />
-          {/* <Route path={`testimonial/:id`} element={<Testimonial />} /> */}
+          <Route path={`old/portfolio-details/:id`} element={<PortfolioDetails />} />
+          <Route path={`old/blog`} element={<Blog />} />
+          <Route path={`old/blog-details/:id`} element={<BlogDetails />} />
+          {/* <Route path={`old/testimonial/:id`} element={<Testimonial />} /> */}
 
           
           {/* Login Route */}
           <Route
-                    path="/admin/*"
+                    path="/old/admin/*"
                     element={
                         isAuthenticated ? (
                             <Mainpage />

@@ -41,16 +41,16 @@ import ViewQuote from "./pages/QuoteResp/ViewQuote";
 const Mainpage = () => {
 
     const menus = [
-    { name: "Services ", path: "/admin/services", icon: <FaServicestack /> },
-    { name: "Portfolio ", path: "/admin/portfolio", icon: <FaBriefcase /> },
-    { name: "Clients ", path: "/admin/clients", icon: <FaUsers /> },
-    { name: "About US ", path: "/admin/about", icon: <BsInfoCircle /> },
-    { name: "Team ", path: "/admin/team", icon: <FaTeamspeak /> },
-    { name: "Testimonials ", path: "/admin/testimonial", icon: <FaComment /> },
-    { name: "Blogs ", path: "/admin/blog", icon: <FaBlog /> },
-    { name: "Contact ", path: "/admin/contact", icon: <FaFileContract /> },
-    { name: "Quote ", path: "/admin/quote", icon: <BsQuote /> },
-    { name: "Quote Response ", path: "/admin/quote-res", icon: <BsFillChatQuoteFill /> },
+    { name: "Services ", path: "/old/admin/services", icon: <FaServicestack /> },
+    { name: "Portfolio ", path: "/old/admin/portfolio", icon: <FaBriefcase /> },
+    { name: "Clients ", path: "/old/admin/clients", icon: <FaUsers /> },
+    { name: "About US ", path: "/old/admin/about", icon: <BsInfoCircle /> },
+    { name: "Team ", path: "/old/admin/team", icon: <FaTeamspeak /> },
+    { name: "Testimonials ", path: "/old/admin/testimonial", icon: <FaComment /> },
+    { name: "Blogs ", path: "/old/admin/blog", icon: <FaBlog /> },
+    { name: "Contact ", path:"/old/admin/contact", icon: <FaFileContract /> },
+    { name: "Quote ", path: "/old/admin/quote", icon: <BsQuote /> },
+    { name: "Quote Response ", path: "/old/admin/quote-res", icon: <BsFillChatQuoteFill /> },
 
 
     ];
