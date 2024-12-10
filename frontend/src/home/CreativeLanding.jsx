@@ -224,7 +224,9 @@ class CreativeLanding extends Component {
            backgroundSize: 'cover',
            backgroundRepeat: 'no-repeat',
            backgroundPosition: 'center',
-  }}>
+  }}
+  loading="lazy" // This ensures lazy loading of the image if you use an <img> tag inside the div
+>
            {SlideList.map((value, index) => (
   <React.Suspense fallback={<div>Loading...</div>}>
     <div

@@ -24,10 +24,10 @@ const [Value, setValue] = useState()
  
     return (
       <>
-       (
+       
     <Helmet>
       <meta charSet="utf-8" />
-      <title>Contact Us | SharpLogicians | Creative Digital Agency</title>
+      <title> SharpLogicians | Creative Digital Agency</title>
       <meta
         name="description"
         content="Around - Multipurpose Bootstrap Template"
